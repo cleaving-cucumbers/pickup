@@ -3,15 +3,16 @@ Template.login.events({
     Meteor.loginWithFacebook({}, function(err) {
       if (err) {
         console.log(err);
-        throw new Meteor.Error("Facebook login failed");
+        throw new Meteor.Error('Facebook login failed');
       }
       Session.set('activeTemplate', 'activitySelection');
     });
   }
 });
 
-Template.body.helpers({
+Template.login.helpers({
   redirectToActivitySelection: function () {
-    return Session.set('activeTemplate', 'activitySelection');
+    console.log
+    Session.set('activeTemplate', 'activitySelection');
   }
 });
