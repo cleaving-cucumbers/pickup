@@ -1,6 +1,8 @@
 <template name='profile'>
   {{#if currentUser}}
-    <img src='http://graph.facebook.com/{{currentUser.services.facebook.id}}/picture' alt='picture not found'/> {{fullName}}
+    <img src='http://graph.facebook.com/{{currentUser.services.facebook.id}}/picture' alt='picture not found'/>
+    {{fullName}}
+    {{> logout}}
   {{else}}
     <div>Please log in</div>
   {{/if}}
