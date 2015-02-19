@@ -1,9 +1,10 @@
 <template name='login'>
   {{#if currentUser}}
-    asdf
     {{redirectToActivitySelection}}
   {{else}}
-    <button id='facebook-login' class='btn btn-primary'> Login with Facebook</button>
+    <div class='login-view'>
+      <button id='facebook-login' class='btn btn-primary'> Login with Facebook</button>
+    </div>
   {{/if}}
 </template>
 
